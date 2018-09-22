@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rasalas"
+version = "0.1.0"
+description = ""
+authors = ["Ricardo Cisterna <r.cisternasantos@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "*"
+face_recognition = "^1.2"
+opencv-python = "^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pylint = "^2.1"
+flake8 = "^3.5"
+rope = "^0.11.0"
+
+[tool.poetry.scripts]
+main = 'rasalas.demo:main'
