@@ -37,12 +37,11 @@ def _scan_known_people(people_path):
     return known_names, known_face_encodings
 
 
-def live(scale=0.25, tolerance=0.6):
+def live(known_path, scale=0.25, tolerance=0.6):
     """Demo en vivo utilizando la cámara integrada."""
     video_capture = cv2.VideoCapture(0)
 
     # Carga las imagenes de gente conocida desde un directorio
-    known_path = "/Users/rcisterna/Code/rasalas/img/"
     known_face_names, known_face_encodings = _scan_known_people(known_path)
 
     process_this_frame = True
