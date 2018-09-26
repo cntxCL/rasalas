@@ -3,6 +3,7 @@
 #
 '''Demo de reconocimiento facial.'''
 
+import argparse
 import os
 import re
 
@@ -107,3 +108,13 @@ def live(known_path, scale=0.25, tolerance=0.6):
     # Libera los recursos
     video_capture.release()
     cv2.destroyAllWindows()
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'path',
+        help='Directorio con las imagenes de personas conocidas.'
+    )
+    args = parser.parse_args()
+    live(args.path)
